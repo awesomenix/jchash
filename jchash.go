@@ -11,7 +11,7 @@ func JumpConsistentHashStr(key string, num_buckets uint64) (uint64, error) {
 
 func JumpConsistentHashInt(key, num_buckets uint64) (uint64, error) {
 	var b, j uint64 = 0, 0
-	err := errors.New("error bucket size specified")
+	err := errors.New("error invalid bucket size specified")
 	for j < num_buckets {
 		b = j
 		key = key*2862933555777941757 + 1
